@@ -1,0 +1,20 @@
+@"
+# Backend
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/data/*.db
+backend/data/*.sqlite
+backend/data/*.sqlite3
+backend/*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/*.log
+
+# General
+*.log
+.DS_Store
+"@ | Set-Content .gitignore
