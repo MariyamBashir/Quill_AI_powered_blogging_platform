@@ -137,3 +137,8 @@ h1, h2, h3 {
   margin: 0 auto;
   padding: 32px;
 }
+
+textarea.field {
+  resize: vertical;
+  font-family: var(--font-sans);
+}
