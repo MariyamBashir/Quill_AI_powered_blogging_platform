@@ -22,7 +22,12 @@ export default function Dashboard() {
 
   return (
     <Layout>
-      <h1>Welcome back{user?.email ? `, ${user.email}` : ""}</h1>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <h1>Welcome back{user?.email ? `, ${user.email}` : ""}</h1>
+        <Link to="/posts" className="btn" style={{ width: "auto", padding: "10px 20px", textDecoration: "none" }}>
+          New Post
+        </Link>
+      </div>
 
       {!loading && analytics && (
         <div style={{ display: "flex", gap: "16px", marginTop: "24px", flexWrap: "wrap" }}>

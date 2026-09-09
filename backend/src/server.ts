@@ -5,6 +5,7 @@ import { db } from "./db/database.js";
 import authRouter from "./routes/auth.js";
 import apiKeysRouter from "./routes/apiKeys.js";
 import postsRouter from "./routes/posts.js";
+import mcpRouter from "./routes/mcp.js";
 import cors from "cors";
 
 dotenv.config();
@@ -17,7 +18,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-
 app.get("/health", (_req, res) => {
   res.json({
     status: "ok"
@@ -27,6 +27,7 @@ app.get("/health", (_req, res) => {
 app.use("/auth", authRouter);
 app.use("/auth/api-keys", apiKeysRouter);
 app.use("/posts", postsRouter);
+app.use("/mcp", mcpRouter);
 
 app.listen(PORT, () => {
   console.log(`Quill server running on http://localhost:${PORT}`);
