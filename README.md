@@ -50,27 +50,28 @@ Both the REST API and the MCP server live inside the same Express process and re
 
 quill/
 ├── backend/
-│ ├── src/
-│ │ ├── server.ts # Express app entrypoint (REST + MCP mounted together)
-│ │ ├── db/
-│ │ │ ├── database.ts # SQLite connection
-│ │ │ └── migrate.ts # Migration runner
-│ │ ├── middleware/
-│ │ │ └── auth.ts # JWT + API key authentication
-│ │ ├── routes/
-│ │ │ ├── auth.ts # Signup / login
-│ │ │ ├── apiKeys.ts # Generate / list / revoke API keys
-│ │ │ ├── posts.ts # Posts CRUD, publish, analytics
-│ │ │ └── mcp.ts # POST /mcp/:apiKey — Streamable HTTP MCP endpoint
-│ │ └── mcp/
-│ │ └── server.ts # MCP tool definitions (create_post, list_posts, publish_post, get_analytics)
-│ └── migrations/
+│   ├── src/
+│   │   ├── server.ts                 # Express app entrypoint (REST + MCP mounted together)
+│   │   ├── db/
+│   │   │   ├── database.ts           # SQLite connection
+│   │   │   └── migrate.ts            # Migration runner
+│   │   ├── middleware/
+│   │   │   └── auth.ts               # JWT + API key authentication
+│   │   ├── routes/
+│   │   │   ├── auth.ts               # Signup / login
+│   │   │   ├── apiKeys.ts            # Generate / list / revoke API keys
+│   │   │   ├── posts.ts              # Posts CRUD, publish, analytics
+│   │   │   └── mcp.ts                # POST /mcp/:apiKey — Streamable HTTP MCP endpoint
+│   │   └── mcp/
+│   │       └── server.ts             # MCP tool definitions (create_post, list_posts, publish_post, get_analytics)
+│   └── migrations/
+│       └── (migration files)
 └── frontend/
-└── src/
-├── api/ # Axios client + typed API calls
-├── context/ # AuthContext (JWT session state)
-├── components/ # Layout (top bar/nav)
-└── pages/ # Login, Signup, Dashboard, Posts, PostEdit, Analytics, ApiKeys
+    └── src/
+        ├── api/                      # Axios client + typed API calls
+        ├── context/                  # AuthContext (JWT session state)
+        ├── components/               # Layout (top bar/nav)
+        └── pages/                    # Login, Signup, Dashboard, Posts, PostEdit, Analytics, ApiKeys
 
 
 ## Setup
