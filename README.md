@@ -48,6 +48,7 @@ Both the REST API and the MCP server live inside the same Express process and re
 
 ## Project structure
 
+```
 quill/
 ├── backend/
 │   ├── src/
@@ -72,6 +73,7 @@ quill/
         ├── context/                  # AuthContext (JWT session state)
         ├── components/               # Layout (top bar/nav)
         └── pages/                    # Login, Signup, Dashboard, Posts, PostEdit, Analytics, ApiKeys
+```
 
 
 ## Setup
